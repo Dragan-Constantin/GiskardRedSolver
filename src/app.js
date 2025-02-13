@@ -8,6 +8,9 @@ const { getAvailableServices } = require('./utils/validators');
 
 class App {
     constructor() {
+        // Initialize with Ollama service by default
+        // Other available services: openaiService, anthropicService, mistralService
+        // Services can be switched at runtime using 's' key when paused ('p')
         this.solver = new ChallengeSolver(ollamaService);
         this.isPaused = false;
         this.shouldExit = false;
